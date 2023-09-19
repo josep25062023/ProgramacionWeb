@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+     <link rel="shortcut icon" href="img/puma.png" type="image/x-icon"> 
+    <title>PUMA</title>
+</head>
+<body>
+    <div class="encabezado">
+      <img class="logoPuma" src="img/puma-logo-white-symbol-clothes-design-icon-abstract-football-illustration-with-black-background-free-vector.jpg" alt="">
+        <a href="nuevos" >Nuevos</a>   
+        <a href="">Mujeres</a>    
+        <a href="">Hombres</a>   
+        <a href="">Niños</a> 
+        <a href="">Deportes</a>   
+        <a href="">Colecciones</a>   
+        <input class="input-encabezado" style="color: rgb(220, 220, 220);" type="text" > 
+        <a href="">Sigue tu orden</a>
+        
+        <div class="iconos"> 
+               <img class="amor" src="img/amor.png" alt="" style="height: 25px;">
+               <img class="carrito" src="img/carrito-de-compras.png" alt="" style="height: 35px; ">
+               <img class="usu" src="img/usuario.png" alt="" style="height: 35px;">
+         </div>
+     </div>
+
+     <div id="miModal" class="modal">
+      <div class="modal-contenido">
+          <span class="cerrar-modal" id="cerrarModal">&times;</span>
+          <h1>¡INICIA SESION EN PUMA!</h1>
+          <form id="login-form">
+            <div class="form-group1">
+                <label class="label-usuario" for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group2">
+                <label class="label-contraseña" for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button class="boton-inicio" type="submit">Iniciar Sesión</button>
+        </form>
+      </div>
+  </div>
+  <script>
+   
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("miModal");
+    const cerrarModal = document.getElementById("cerrarModal");
+
+   
+    modal.style.display = "block";
+
+   
+    cerrarModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+   
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
+
+  </script>
+
+     <div class="anuncio1">
+       <img src="img/DREAM RUSH.jpg" alt="">
+       <h1>DREAM RUSH</h1>
+       <h2>FULLED BY NITRO</h2>
+        <button><b>COMPRAR</b></button>
+     </div>
+
+     <div class="chivas-anuncio" style="display: inline-block;">
+      <img src="img/CHIVAS SBS.jpg" alt="" >
+     </div>
+
+     <div style="display: inline-block;">
+      <img src="img/MTY SBS.jpg" alt="">
+     </div>
+
+     <div class="jersey">
+       <div class="jersey-chivas"  >
+         <h1>CHIVAS</h1>
+         <p>JERSEY 2023</p>
+         <button class="comprar" id="comprar"><b>COMPRAR</b></button>
+      </div>
+
+      <script>
+         var boton = document.getElementById("comprar");
+          boton.addEventListener("click", function() {
+           alert("ARTICULO AGOTADO");
+         });
+       </script>
+
+      <div class="jersey-monterrey" >
+         <h1>MONTERREY</h1>
+         <p>JERSEY 2023</p>
+         <button id="comprar" class="comprar"><b>COMPRAR</b></button>
+      </div>
+     
+
+   </div>
+   
+   <div class="anuncio2">
+      <img src="img/23SS_Ecomm_RT_PUMA_Padel_Signature-Victoria_1440x500px.jpg" alt="">
+      <h1>FASTER. PADEL</h1>
+       <p>PUMA presenta por primera vez la colección de PADEL,
+         <br>
+         creada para todo tipo de jugadores tanto aficionados
+         <br>
+         como profesionales. Los productos de PUMA PADEL tienen
+         <br>
+         un alto rendimiento y tecnología que te permitirán rendir al
+         <br>
+         máximo.</p>
+        <button id="boton"><b>CONOCE MAS</b></button>
+        <p id="textoParaMostrar" class="oculto">PUMA presenta por primera vez la colección de PADEL, creada para todo tipo de jugadores tanto aficionados como profesionales. Los productos de PUMA PADEL tienen un alto rendimiento y tecnología que te permitirán rendir al   máximo.</p></p>
+ 
+     <script>
+      const miBoton = document.getElementById("boton");
+      const textoParaMostrar = document.getElementById("textoParaMostrar");
+      
+      miBoton.addEventListener("mouseenter", function () {
+          mostrarTexto();
+      });
+      
+      miBoton.addEventListener("mouseleave", function () {
+          ocultarTexto();
+      });
+      
+      function mostrarTexto() {
+          textoParaMostrar.style.display = "block";
+      }
+      
+      function ocultarTexto() {
+          textoParaMostrar.style.display = "none";
+      }
+      
+      window.addEventListener("scroll", function () {
+          const distanciaDesdeLaParteSuperior = miBoton.getBoundingClientRect().top;
+      
+          if (distanciaDesdeLaParteSuperior <= 100) {
+              mostrarTexto();
+          } else {
+              ocultarTexto();
+          }
+      });
+      </script>
+   </div>
+
+   <p class="Titulo-slider"><b>LOS MAS VENDIDOS</b></p>
+
+
+      <div class="carrusel">
+         <img id="miImagen" class="elemento" src="img/descarga (1).webp" alt="Mi Imagen">
+         <script>const miImagen = document.getElementById("miImagen");
+
+            miImagen.addEventListener("click", function () {
+              
+                miImagen.src = "img/descarga (3).webp"; 
+                miImagen.alt = "Nueva Imagen"; 
+            });</script>
+
+         <img id="miImagen2"  class="elemento" src="img/descarga.webp" alt="Nueva Imagen2">
+         <script>const miImagen2 = document.getElementById("miImagen2");
+
+            miImagen.addEventListener("click", function () {
+                // Cambiar la imagen al hacer clic
+                miImagen2.src = "img/descarga (1).webp"; 
+                miImagen2.alt = "Nueva Imagen9"; 
+            });</script>
+
+         <img id="miImagen3" class="elemento" src="img/imagen3.jpg" alt="Nueva Imagen3">
+         <script>const miImagen3 = document.getElementById("miImagen3");
+
+            miImagen.addEventListener("click", function () {
+                // Cambiar la imagen al hacer clic
+                miImagen3.src = "img/descarga (4).webp"; 
+                miImagen3.alt = "Nueva Imagen7"; 
+            });</script>
+
+         <img id="miImagen4" class="elemento" src="img/iamgen 4.jpg" alt="Nueva Imagen4">
+         <script>const miImagen4 = document.getElementById("miImagen4");
+
+            miImagen.addEventListener("click", function () {
+                // Cambiar la imagen al hacer clic
+                miImagen4.src = "img/descarga (5).webp"; 
+                miImagen4.alt = "Nueva Imagen8"; 
+            });</script>
+        
+      </div>
+
+      <button class="btn-scrolltop" id="btn-scrolltop">
+         <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <script>
+         const btn_scrolltop= document.getElementById("btn-scrolltop")
+         btn_scrolltop.addEventListener('click',()=>{
+            window.scrollTo(0,0)
+         })
+      </script>
+     
+       <div class="modal-conteiner">
+       </div>
+       <script>
+         const modal_conteiner= document.getElementById("modal-conteiner")
+         window.addEventListener("load", () => {
+            createModal
+         })
+       </script>
+
+       
+      <div class="video" id="reproductor"></div>
+      <button id="botonReproducir">Reproducir Video</button>
+      
+
+<script>
+   let player;
+   const botonReproducir = document.getElementById("botonReproducir");
+   
+   
+   function onYouTubeIframeAPIReady() {
+     
+       player = new YT.Player('reproductor', {
+           height: '360',
+           width: '640',
+           videoId: 'https://www.youtube.com/watch?v=fx9H1AaMbRc', 
+           playerVars: {
+               'autoplay': 0, // 0 para no reproducir automáticamente al cargar
+               'controls': 1, // Mostrar controles del reproductor
+               'rel': 0, // No mostrar videos relacionados al final
+           },
+           events: {
+               'onReady': onPlayerReady,
+           }
+       });
+   }
+   
+  
+   function onPlayerReady(event) {
+       
+       botonReproducir.addEventListener("click", function() {
+           player.playVideo();
+       });
+   }
+   </script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+
+<div class="pie-pagina">
+    <img class="pie" src="img/Captura de pantalla 2023-09-19 120901.png" alt="">
+</div> 
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,82 @@
+.btns{
+    text-align: center;
+    background-color: aliceblue;
+}
+
+header{
+    width: 100%;
+
+    height: auto;
+}
+
+.btnHeader {
+    background-color: aliceblue;
+    border: none !important;
+    padding: 10px 20px; /* Ajusta el valor de padding según el tamaño que desees */
+}
+
+
+.header2{
+    text-align: center;
+    align-items: center;
+    
+}
+
+.logo{
+    float: left;
+
+}
+
+.btnHeader2{
+    background-color: white;
+    border: none !important;
+    padding: 10px 20px; /* Ajusta el valor de padding según el tamaño que desees */
+}
+
+.msmNegro{
+    margin-top: 70px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+.fotoPrincipal{
+    width: 100%;
+    margin: 0px;
+    position: absolute;
+    height: auto;
+    margin: 0px;
+
+}
+.comprar{
+    
+    position: absolute; /* Permite posicionamiento absoluto */
+
+    top: 600px; /* Ajusta la posición vertical */
+    left: 315px; /* Ajusta la posición horizontal */
+    background-color: transparent;
+    border: none;
+    padding: 17px;
+    width: 150px;
+    color: rgb(255, 255, 255);
+    background-color: #030303;
+    cursor: pointer;
+    font-size: 12px;
+    right: 100px;
+}
+.FamVans{
+
+    position:  relative;
+    top: 650px;
+    margin-top: 40px;
+    
+    color: rgb(0, 0, 0);
+}
+.ImagenVans{
+    position: relative;
+
+}
+.ImagenVans img{
+    width: 360px;
+    
+    
+}
